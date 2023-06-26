@@ -3,6 +3,8 @@ const infoDisplay = document.querySelector('#info')
 const startCells = [
     "", "", "", "", "", "", "", "", ""
 ]
+let go = "circle"
+infoDisplay.textContent = "Circle goes first"
 
 function createBoard() {
     startCells.forEach((_cell, index) => {
@@ -17,7 +19,7 @@ createBoard()
 
 function addGo(e) {
     const goDisplay = document.createElement('div')
-    goDisplay.classList.add('circle')
+    goDisplay.classList.add('cross')
     e.target.append(goDisplay)
 }
 
